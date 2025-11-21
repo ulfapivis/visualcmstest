@@ -1,1 +1,27 @@
-Ly8gU3RhbmRhbG9uZSBKYXZhU2NyaXB0IHV0aWxpdGllcwpmdW5jdGlvbiB0b2dnbGVNb2JpbGVNZW51KCkgewogIGNvbnN0IG1lbnUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbW9iaWxlLW1lbnUnKTsKICBjb25zdCBoYW1idXJnZXIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcuaGFtYnVyZ2VyLWljb24nKTsKICBjb25zdCBjbG9zZUljb24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcuY2xvc2UtaWNvbicpOwogIAogIGlmIChtZW51KSB7CiAgICBjb25zdCBpc0FjdGl2ZSA9IG1lbnUuY2xhc3NMaXN0LmNvbnRhaW5zKCdhY3RpdmUnKTsKICAgIAogICAgaWYgKGlzQWN0aXZlKSB7CiAgICAgIG1lbnUuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJyk7CiAgICAgIG1lbnUuc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICAgICAgaWYgKGhhbWJ1cmdlcikgaGFtYnVyZ2VyLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOwogICAgICBpZiAoY2xvc2VJY29uKSBjbG9zZUljb24uc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICAgIH0gZWxzZSB7CiAgICAgIG1lbnUuY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7CiAgICAgIG1lbnUuc3R5bGUuZGlzcGxheSA9ICdmbGV4JzsKICAgICAgaWYgKGhhbWJ1cmdlcikgaGFtYnVyZ2VyLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgICAgIGlmIChjbG9zZUljb24pIGNsb3NlSWNvbi5zdHlsZS5kaXNwbGF5ID0gJ2Jsb2NrJzsKICAgIH0KICB9Cn0KCi8vIEluaXRpYWxpemUgb24gcGFnZSBsb2FkCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbigpIHsKICBjb25zb2xlLmxvZygnUGFnZSBsb2FkZWQgc3VjY2Vzc2Z1bGx5Jyk7Cn0pOw==
+// Standalone JavaScript utilities
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.querySelector('.hamburger-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  
+  if (menu) {
+    const isActive = menu.classList.contains('active');
+    
+    if (isActive) {
+      menu.classList.remove('active');
+      menu.style.display = 'none';
+      if (hamburger) hamburger.style.display = 'block';
+      if (closeIcon) closeIcon.style.display = 'none';
+    } else {
+      menu.classList.add('active');
+      menu.style.display = 'flex';
+      if (hamburger) hamburger.style.display = 'none';
+      if (closeIcon) closeIcon.style.display = 'block';
+    }
+  }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Page loaded successfully');
+});
